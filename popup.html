@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Code Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Source Code Downloader</h1>
+            <p class="subtitle">Captured External Resources</p>
+        </header>
+        
+        <main class="main-content">
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading captured resources...</p>
+            </div>
+            
+            <div id="no-resources" class="no-resources" style="display: none;">
+                <div class="icon">📦</div>
+                <p class="message">No external resources captured yet.</p>
+                <p class="hint">Browse a website to start capturing resources from external domains.</p>
+            </div>
+            
+            <div id="resources-list" class="resources-list" style="display: none;">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="stats">
+                <span id="domain-count">0</span> domains • 
+                <span id="resource-count">0</span> resources
+            </div>
+            <button id="refresh-btn" class="refresh-btn" title="Refresh">🔄</button>
+        </footer>
+        
+        <!-- Settings Panel (Initially Hidden) -->
+        <div id="settings-panel" class="settings-panel" style="display: none;">
+            <div class="settings-header">
+                <h3>Target Domains</h3>
+                <button id="close-settings" class="close-btn">&times;</button>
+            </div>
+            <div class="settings-content">
+                <textarea id="domains-textarea" placeholder="Enter domains, one per line&#10;Example:&#10;cdn.example.com&#10;static.assets.com"></textarea>
+                <div class="settings-actions">
+                    <button id="save-domains" class="btn btn-primary">Save</button>
+                    <button id="reset-domains" class="btn btn-secondary">Reset to Default</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Settings Toggle Button -->
+        <button id="settings-toggle" class="settings-toggle" title="Settings">⚙️</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
