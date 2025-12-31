@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300" height="200"
+     onload="alert(localStorage.getItem('sc-sso-auth-ticket'))">
+  <rect width="300" height="200" fill="#cce5ff"/>
+  <text x="30" y="100" font-size="20" fill="#000">
+    SVG XSS Download Test
+  </text>
+</svg>
+
